@@ -1,0 +1,9 @@
+PORT=3000
+BASE_URL=http://localhost:3000
+NODE_ENV=development
+SESSION_SECRET=replace-with-strong-secret
+GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-client-secret
+MAX_CONCURRENT_UPLOADS=2
+MAX_BULK_ITEMS=25
+
