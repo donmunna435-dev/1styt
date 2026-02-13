@@ -1,0 +1,23 @@
+{
+  "name": "youtube-upload-automation",
+  "version": "1.0.0",
+  "description": "YouTube uploader for Drive and Telegram bot links",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "googleapis": "^144.0.0",
+    "morgan": "^1.10.0",
+    "uuid": "^11.0.3"
+  }
+}
+
