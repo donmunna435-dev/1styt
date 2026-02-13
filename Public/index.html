@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Upload Automation</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>YouTube Upload Automation</h1>
+        <p>Upload from Google Drive links or Telegram file-to-link bot URLs, including bulk uploads.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <button id="signinBtn" class="btn primary">Sign in with YouTube</button>
+          <button id="logoutBtn" class="btn ghost">Logout</button>
+          <span id="authStatus" class="badge">Checking auth...</span>
+          <span id="appMessage" class="badge msg-neutral">Starting...</span>
+        </div>
+        <p id="redirectUri" class="hint"></p>
+      </section>
+
+      <section class="card">
+        <h2>Bulk Upload</h2>
+        <p class="hint">Paste one URL per line. Works with public Drive links and direct Telegram bot file links.</p>
+        <textarea id="urlList" rows="8" placeholder="https://drive.google.com/file/d/...\nhttps://example-telegram-bot-file-link..."></textarea>
+
+        <div class="grid">
+          <label>
+            Default Title Prefix
+            <input id="titlePrefix" placeholder="My Upload" />
+          </label>
+          <label>
+            Privacy
+            <select id="privacyStatus">
+              <option value="private">Private</option>
+              <option value="unlisted">Unlisted</option>
+              <option value="public">Public</option>
+            </select>
+          </label>
+          <label>
+            Tags (comma separated)
+            <input id="tags" placeholder="tag1,tag2" />
+          </label>
+        </div>
+        <label>
+          Description
+          <textarea id="description" rows="4" placeholder="Video description"></textarea>
+        </label>
+
+        <div class="row">
+          <button id="submitBtn" class="btn primary">Start Bulk Upload</button>
+          <span class="hint" id="queueInfo"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Jobs</h2>
+        <div id="jobs" class="jobs"></div>
+      </section>
+    </main>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
+
