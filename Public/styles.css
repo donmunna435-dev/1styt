@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --ok: #16a34a;
+  --warn: #ca8a04;
+  --bad: #dc2626;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #dbeafe 0%, var(--bg) 45%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+}
+
+.hero { margin-bottom: 1rem; }
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .8rem;
+  margin: .8rem 0;
+}
+
+label { display: flex; flex-direction: column; gap: .35rem; font-size: .95rem; }
+textarea, input, select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: .65rem .75rem;
+  font: inherit;
+}
+
+textarea:focus, input:focus, select:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: var(--primary);
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: .6rem .9rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .1s ease, opacity .2s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .65; cursor: not-allowed; }
+.btn.primary { background: var(--primary); color: white; }
+.btn.ghost { background: #e5e7eb; }
+
+.badge {
+  padding: .3rem .55rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  font-size: .85rem;
+}
+.msg-ok { background: #dcfce7; color: #14532d; }
+.msg-bad { background: #fee2e2; color: #7f1d1d; }
+.msg-neutral { background: #e5e7eb; color: #1f2937; }
+
+.hint { color: var(--muted); font-size: .9rem; }
+.jobs { display: grid; gap: .7rem; }
+
+.job {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: .65rem;
+}
+.status-queued { color: var(--warn); }
+.status-running { color: var(--primary); }
+.status-done { color: var(--ok); }
+.status-failed { color: var(--bad); }
+
